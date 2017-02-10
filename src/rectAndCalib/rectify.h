@@ -1,5 +1,5 @@
-#ifndef INTRINSICEXTRINSIC_H
-#define INTRINSICEXTRINSIC_H
+#ifndef RECTANDCALIB_H
+#define RECTANDCALIB_H
 
 #include <iostream>
 #include <opencv2/core/core.hpp>
@@ -13,7 +13,7 @@
 using namespace std;
 using namespace cv;
 
-namespace intrinsicExtrinsic
+namespace rectAndCalib
 {
     void loadStereoExtrinsics(unordered_map<string,Mat> extData, Rect roi1, Rect roi2, Mat &R1, Mat &P1, Mat &R2, Mat &P2, Rect &validRoi);
     void loadStereoIntrinsics(unordered_map<string, Mat> intData1, unordered_map<string, Mat> intData2, Mat &cameraMatrix1, Mat &cameraMatrix2, Mat &distCoeffs1,  Mat &distCoeffs2);
@@ -23,4 +23,4 @@ namespace intrinsicExtrinsic
     void fsTest(string ymlExtrinsics, string ymlIntrinsics, Mat imgLeft, Mat imgRight, Mat& rectImg1, Mat& rectImg2);
 }
 
-#endif // INTRINSICEXTRINSIC_H
+#endif // RECTANDCALIB_H

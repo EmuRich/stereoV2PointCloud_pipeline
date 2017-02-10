@@ -1,6 +1,6 @@
 #include "rectify.h"
 
-void intrinsicExtrinsic::loadStereoExtrinsics(unordered_map<string, Mat> extData, Rect roi1, Rect roi2, Mat &R1, Mat &P1, Mat &R2, Mat &P2, Rect &validRoi){
+void rectAndCalib::loadStereoExtrinsics(unordered_map<string, Mat> extData, Rect roi1, Rect roi2, Mat &R1, Mat &P1, Mat &R2, Mat &P2, Rect &validRoi){
     R1 = extData["R1"];
     P1 = extData["P1"];
     R2 = extData["R2"];
@@ -16,7 +16,7 @@ void intrinsicExtrinsic::loadStereoExtrinsics(unordered_map<string, Mat> extData
     return;
 }
 
-void intrinsicExtrinsic::loadStereoIntrinsics(unordered_map<string, Mat> intData1, unordered_map<string, Mat> intData2, Mat &cameraMatrix1, Mat &cameraMatrix2, Mat &distCoeffs1,  Mat &distCoeffs2){
+void rectAndCalib::loadStereoIntrinsics(unordered_map<string, Mat> intData1, unordered_map<string, Mat> intData2, Mat &cameraMatrix1, Mat &cameraMatrix2, Mat &distCoeffs1,  Mat &distCoeffs2){
     cameraMatrix1 = intData1["Camera Matrix"];
     cameraMatrix2 = intData2["Camera Matrix"];
 
@@ -27,7 +27,7 @@ void intrinsicExtrinsic::loadStereoIntrinsics(unordered_map<string, Mat> intData
 }
 
 
-void intrinsicExtrinsic::undistortStereoImages(Mat inputImg1, Mat inputImg2, Mat &outputImg1, Mat &outputImg2, Mat &cameraMatrix1, Mat &cameraMatrix2, Mat &distCoeffs1,  Mat &distCoeffs2){
+void rectAndCalib::undistortStereoImages(Mat inputImg1, Mat inputImg2, Mat &outputImg1, Mat &outputImg2, Mat &cameraMatrix1, Mat &cameraMatrix2, Mat &distCoeffs1,  Mat &distCoeffs2){
 
     undistort(inputImg1, outputImg1, cameraMatrix1, distCoeffs1);
     undistort(inputImg2, outputImg2, cameraMatrix2, distCoeffs2);
@@ -36,7 +36,7 @@ void intrinsicExtrinsic::undistortStereoImages(Mat inputImg1, Mat inputImg2, Mat
 }
 
 
-void intrinsicExtrinsic::loadIntEntFromFS(string ymlExtrinsics, string ymlIntrinsics, unordered_map<string, Mat> &intData1, unordered_map<string, Mat> &intData2, unordered_map<string, Mat> &extData, Rect &roi1, Rect &roi2){
+void rectAndCalib::loadIntEntFromFS(string ymlExtrinsics, string ymlIntrinsics, unordered_map<string, Mat> &intData1, unordered_map<string, Mat> &intData2, unordered_map<string, Mat> &extData, Rect &roi1, Rect &roi2){
 
     FileStorage fStorage(ymlExtrinsics.c_str(), FileStorage::READ);
 
@@ -64,7 +64,7 @@ void intrinsicExtrinsic::loadIntEntFromFS(string ymlExtrinsics, string ymlIntrin
     return;
 }
 
-void intrinsicExtrinsic::rectifyHandler(Mat inputImg1, Mat inputImg2, unordered_map<string, Mat> intData1, unordered_map<string, Mat> intData2, unordered_map<string, Mat> extData, Rect roi1, Rect roi2, Mat& rectImg1, Mat& rectImg2)
+void rectAndCalib::rectifyHandler(Mat inputImg1, Mat inputImg2, unordered_map<string, Mat> intData1, unordered_map<string, Mat> intData2, unordered_map<string, Mat> extData, Rect roi1, Rect roi2, Mat& rectImg1, Mat& rectImg2)
 {
     Mat undistorted1, undistorted2, cameraMatrix1, cameraMatrix2, distCoeffs1, distCoeffs2;
     Mat noDist = Mat::zeros(5,1, CV_32F);
@@ -103,12 +103,13 @@ void intrinsicExtrinsic::rectifyHandler(Mat inputImg1, Mat inputImg2, unordered_
 
     // This is for debug only
     //--------------------------------------------------------------------------- 
-    imwrite("rectimg1.jpg", rectImg1);
-    imwrite("rectimg2.jpg", rectImg2);
+    // imwrite("rectimg1.jpg", rectImg1);
+    // imwrite("rectimg2.jpg", rectImg2);
+    
     return;
 }
 
-void intrinsicExtrinsic::fsTest(string ymlExtrinsics, string ymlIntrinsics, Mat imgLeft, Mat imgRight, Mat& rectImg1, Mat& rectImg2){
+void rectAndCalib::fsTest(string ymlExtrinsics, string ymlIntrinsics, Mat imgLeft, Mat imgRight, Mat& rectImg1, Mat& rectImg2){
     unordered_map<string, Mat> intData1, intData2, extData;
     Rect roi1, roi2;
 

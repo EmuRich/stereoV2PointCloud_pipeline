@@ -1,3 +1,3 @@
 cmake ..
 make
-valgrind ./ImageRectify
+valgrind ./stereoToGrid

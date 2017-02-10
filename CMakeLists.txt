@@ -29,9 +29,9 @@ FIND_PACKAGE(Config++ REQUIRED)
 INCLUDE_DIRECTORIES(${LIBCONFIG_INCLUDE_DIR})
 SET(LIBS ${LIBS} ${LIBCONFIG_LIBRARIES})
 
-aux_source_directory(. SRC_LIST)
+aux_source_directory(./src SRC_LIST)
 
-file(GLOB THIRDPS dispCloud/thirdParty/*.cpp dispCloud/thirdParty/*.h dispCloud/*.h dispCloud/*.cpp rectAndCalib/*.h rectAndCalib/*.cpp)
+file(GLOB THIRDPS src/dispCloud/thirdParty/*.cpp src/dispCloud/thirdParty/*.h src/dispCloud/*.h src/dispCloud/*.cpp src/rectAndCalib/*.h src/rectAndCalib/*.cpp)
 add_executable(${PROJECT_NAME} ${SRC_LIST} ${THIRDPS})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_DEFINITIONS "USE_PCL=1")

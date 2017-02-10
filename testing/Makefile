@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/em/projects/robotics/RectificationAndCalib
+CMAKE_SOURCE_DIR = /home/em/projects/stereoV2PointCloud_pipeline
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/em/projects/robotics/RectificationAndCalib/testing
+CMAKE_BINARY_DIR = /home/em/projects/stereoV2PointCloud_pipeline/testing
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/em/projects/robotics/RectificationAndCalib/testing/CMakeFiles /home/em/projects/robotics/RectificationAndCalib/testing/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/em/projects/stereoV2PointCloud_pipeline/testing/CMakeFiles /home/em/projects/stereoV2PointCloud_pipeline/testing/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/em/projects/robotics/RectificationAndCalib/testing/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/em/projects/stereoV2PointCloud_pipeline/testing/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,206 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ImageRectify
+# Target rules for targets named stereoToGrid
 
 # Build rule for target.
-ImageRectify: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ImageRectify
-.PHONY : ImageRectify
+stereoToGrid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 stereoToGrid
+.PHONY : stereoToGrid
 
 # fast build rule for target.
-ImageRectify/fast:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/build
-.PHONY : ImageRectify/fast
+stereoToGrid/fast:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/build
+.PHONY : stereoToGrid/fast
+
+src/dispCloud/dispCloud.o: src/dispCloud/dispCloud.cpp.o
+
+.PHONY : src/dispCloud/dispCloud.o
+
+# target to build an object file
+src/dispCloud/dispCloud.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/dispCloud.cpp.o
+.PHONY : src/dispCloud/dispCloud.cpp.o
+
+src/dispCloud/dispCloud.i: src/dispCloud/dispCloud.cpp.i
+
+.PHONY : src/dispCloud/dispCloud.i
+
+# target to preprocess a source file
+src/dispCloud/dispCloud.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/dispCloud.cpp.i
+.PHONY : src/dispCloud/dispCloud.cpp.i
+
+src/dispCloud/dispCloud.s: src/dispCloud/dispCloud.cpp.s
+
+.PHONY : src/dispCloud/dispCloud.s
+
+# target to generate assembly for a file
+src/dispCloud/dispCloud.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/dispCloud.cpp.s
+.PHONY : src/dispCloud/dispCloud.cpp.s
+
+src/dispCloud/thirdParty/adcensuscv.o: src/dispCloud/thirdParty/adcensuscv.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/adcensuscv.o
+
+# target to build an object file
+src/dispCloud/thirdParty/adcensuscv.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/adcensuscv.cpp.o
+.PHONY : src/dispCloud/thirdParty/adcensuscv.cpp.o
+
+src/dispCloud/thirdParty/adcensuscv.i: src/dispCloud/thirdParty/adcensuscv.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/adcensuscv.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/adcensuscv.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/adcensuscv.cpp.i
+.PHONY : src/dispCloud/thirdParty/adcensuscv.cpp.i
+
+src/dispCloud/thirdParty/adcensuscv.s: src/dispCloud/thirdParty/adcensuscv.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/adcensuscv.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/adcensuscv.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/adcensuscv.cpp.s
+.PHONY : src/dispCloud/thirdParty/adcensuscv.cpp.s
+
+src/dispCloud/thirdParty/aggregation.o: src/dispCloud/thirdParty/aggregation.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/aggregation.o
+
+# target to build an object file
+src/dispCloud/thirdParty/aggregation.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/aggregation.cpp.o
+.PHONY : src/dispCloud/thirdParty/aggregation.cpp.o
+
+src/dispCloud/thirdParty/aggregation.i: src/dispCloud/thirdParty/aggregation.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/aggregation.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/aggregation.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/aggregation.cpp.i
+.PHONY : src/dispCloud/thirdParty/aggregation.cpp.i
+
+src/dispCloud/thirdParty/aggregation.s: src/dispCloud/thirdParty/aggregation.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/aggregation.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/aggregation.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/aggregation.cpp.s
+.PHONY : src/dispCloud/thirdParty/aggregation.cpp.s
+
+src/dispCloud/thirdParty/disparityrefinement.o: src/dispCloud/thirdParty/disparityrefinement.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.o
+
+# target to build an object file
+src/dispCloud/thirdParty/disparityrefinement.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/disparityrefinement.cpp.o
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.cpp.o
+
+src/dispCloud/thirdParty/disparityrefinement.i: src/dispCloud/thirdParty/disparityrefinement.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/disparityrefinement.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/disparityrefinement.cpp.i
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.cpp.i
+
+src/dispCloud/thirdParty/disparityrefinement.s: src/dispCloud/thirdParty/disparityrefinement.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/disparityrefinement.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/disparityrefinement.cpp.s
+.PHONY : src/dispCloud/thirdParty/disparityrefinement.cpp.s
+
+src/dispCloud/thirdParty/imageprocessor.o: src/dispCloud/thirdParty/imageprocessor.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/imageprocessor.o
+
+# target to build an object file
+src/dispCloud/thirdParty/imageprocessor.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/imageprocessor.cpp.o
+.PHONY : src/dispCloud/thirdParty/imageprocessor.cpp.o
+
+src/dispCloud/thirdParty/imageprocessor.i: src/dispCloud/thirdParty/imageprocessor.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/imageprocessor.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/imageprocessor.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/imageprocessor.cpp.i
+.PHONY : src/dispCloud/thirdParty/imageprocessor.cpp.i
+
+src/dispCloud/thirdParty/imageprocessor.s: src/dispCloud/thirdParty/imageprocessor.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/imageprocessor.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/imageprocessor.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/imageprocessor.cpp.s
+.PHONY : src/dispCloud/thirdParty/imageprocessor.cpp.s
+
+src/dispCloud/thirdParty/scanlineoptimization.o: src/dispCloud/thirdParty/scanlineoptimization.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.o
+
+# target to build an object file
+src/dispCloud/thirdParty/scanlineoptimization.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/scanlineoptimization.cpp.o
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.cpp.o
+
+src/dispCloud/thirdParty/scanlineoptimization.i: src/dispCloud/thirdParty/scanlineoptimization.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/scanlineoptimization.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/scanlineoptimization.cpp.i
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.cpp.i
+
+src/dispCloud/thirdParty/scanlineoptimization.s: src/dispCloud/thirdParty/scanlineoptimization.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/scanlineoptimization.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/scanlineoptimization.cpp.s
+.PHONY : src/dispCloud/thirdParty/scanlineoptimization.cpp.s
+
+src/dispCloud/thirdParty/stereoprocessor.o: src/dispCloud/thirdParty/stereoprocessor.cpp.o
+
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.o
+
+# target to build an object file
+src/dispCloud/thirdParty/stereoprocessor.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/stereoprocessor.cpp.o
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.cpp.o
+
+src/dispCloud/thirdParty/stereoprocessor.i: src/dispCloud/thirdParty/stereoprocessor.cpp.i
+
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.i
+
+# target to preprocess a source file
+src/dispCloud/thirdParty/stereoprocessor.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/stereoprocessor.cpp.i
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.cpp.i
+
+src/dispCloud/thirdParty/stereoprocessor.s: src/dispCloud/thirdParty/stereoprocessor.cpp.s
+
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.s
+
+# target to generate assembly for a file
+src/dispCloud/thirdParty/stereoprocessor.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/dispCloud/thirdParty/stereoprocessor.cpp.s
+.PHONY : src/dispCloud/thirdParty/stereoprocessor.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +318,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +327,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,35 +336,35 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/rectify.o: src/rectify.cpp.o
+src/rectAndCalib/rectify.o: src/rectAndCalib/rectify.cpp.o
 
-.PHONY : src/rectify.o
+.PHONY : src/rectAndCalib/rectify.o
 
 # target to build an object file
-src/rectify.cpp.o:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/rectify.cpp.o
-.PHONY : src/rectify.cpp.o
+src/rectAndCalib/rectify.cpp.o:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/rectAndCalib/rectify.cpp.o
+.PHONY : src/rectAndCalib/rectify.cpp.o
 
-src/rectify.i: src/rectify.cpp.i
+src/rectAndCalib/rectify.i: src/rectAndCalib/rectify.cpp.i
 
-.PHONY : src/rectify.i
+.PHONY : src/rectAndCalib/rectify.i
 
 # target to preprocess a source file
-src/rectify.cpp.i:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/rectify.cpp.i
-.PHONY : src/rectify.cpp.i
+src/rectAndCalib/rectify.cpp.i:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/rectAndCalib/rectify.cpp.i
+.PHONY : src/rectAndCalib/rectify.cpp.i
 
-src/rectify.s: src/rectify.cpp.s
+src/rectAndCalib/rectify.s: src/rectAndCalib/rectify.cpp.s
 
-.PHONY : src/rectify.s
+.PHONY : src/rectAndCalib/rectify.s
 
 # target to generate assembly for a file
-src/rectify.cpp.s:
-	$(MAKE) -f CMakeFiles/ImageRectify.dir/build.make CMakeFiles/ImageRectify.dir/src/rectify.cpp.s
-.PHONY : src/rectify.cpp.s
+src/rectAndCalib/rectify.cpp.s:
+	$(MAKE) -f CMakeFiles/stereoToGrid.dir/build.make CMakeFiles/stereoToGrid.dir/src/rectAndCalib/rectify.cpp.s
+.PHONY : src/rectAndCalib/rectify.cpp.s
 
 # Help Target
 help:
@@ -185,13 +374,34 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ImageRectify"
+	@echo "... stereoToGrid"
+	@echo "... src/dispCloud/dispCloud.o"
+	@echo "... src/dispCloud/dispCloud.i"
+	@echo "... src/dispCloud/dispCloud.s"
+	@echo "... src/dispCloud/thirdParty/adcensuscv.o"
+	@echo "... src/dispCloud/thirdParty/adcensuscv.i"
+	@echo "... src/dispCloud/thirdParty/adcensuscv.s"
+	@echo "... src/dispCloud/thirdParty/aggregation.o"
+	@echo "... src/dispCloud/thirdParty/aggregation.i"
+	@echo "... src/dispCloud/thirdParty/aggregation.s"
+	@echo "... src/dispCloud/thirdParty/disparityrefinement.o"
+	@echo "... src/dispCloud/thirdParty/disparityrefinement.i"
+	@echo "... src/dispCloud/thirdParty/disparityrefinement.s"
+	@echo "... src/dispCloud/thirdParty/imageprocessor.o"
+	@echo "... src/dispCloud/thirdParty/imageprocessor.i"
+	@echo "... src/dispCloud/thirdParty/imageprocessor.s"
+	@echo "... src/dispCloud/thirdParty/scanlineoptimization.o"
+	@echo "... src/dispCloud/thirdParty/scanlineoptimization.i"
+	@echo "... src/dispCloud/thirdParty/scanlineoptimization.s"
+	@echo "... src/dispCloud/thirdParty/stereoprocessor.o"
+	@echo "... src/dispCloud/thirdParty/stereoprocessor.i"
+	@echo "... src/dispCloud/thirdParty/stereoprocessor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/rectify.o"
-	@echo "... src/rectify.i"
-	@echo "... src/rectify.s"
+	@echo "... src/rectAndCalib/rectify.o"
+	@echo "... src/rectAndCalib/rectify.i"
+	@echo "... src/rectAndCalib/rectify.s"
 .PHONY : help
 
 
